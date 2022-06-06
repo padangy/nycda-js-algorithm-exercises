@@ -4,8 +4,17 @@
  * Returns true or false.
  */
 function equalsWithEpsilon(x, y, epsilon) {
-
+  let diff;
+  if(y <= x) {
+    diff = y - x;
+  } 
+  else {
+    diff = x - y;
+  } 
+  return diff <= epsilon;
 }
+
+console.log(equalsWithEpsilon(1,1,2));
 
 describe('equalsWithEpsilon', function() {
   const assert = require("chai").assert;

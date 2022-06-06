@@ -3,9 +3,14 @@
  * You're not allowed to use String.prototype.reverse().
  * Returns the new string.
  */
-function reverseString() {
-
+function reverseString(str) {
+  let result = '';
+  for(let i = str.length-1; i >= 0; i--) {
+    result += str[i];
+  }
+  return result;
 }
+console.log(reverseString('alphabet'));
 
 describe('reverseString', function() {
   const assert = require("chai").assert;
